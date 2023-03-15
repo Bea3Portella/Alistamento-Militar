@@ -1,0 +1,19 @@
+birth = int(input('Ano de nascimento: '))
+from datetime import date
+current_date = date.today().year
+calculation = current_date - birth
+enlistment_year = birth + 18
+
+if birth == 2004:
+    print('''Quem nasceu em {} tem 18 anos em {}.
+Você tem que se alistar IMEDIATAMENTE!'''.format(birth, current_date))
+elif birth < 2004:
+    year_1 = 2022 - (birth+18)
+    print('''Quem nasceu em {} tem {} anos em {}.
+Você já deveria ter se alistado há {} anos
+Seu alistamento foi em {}'''.format(birth,calculation,current_date, year_1, enlistment_year ))
+elif birth > 2004:
+    year_2 = -2022 + (birth+18)
+    print('''Quem nasceu em {} tem {} anos em {}
+Ainda faltam {} anos para o seu alistamento
+Seu alistamento será em {}.'''.format(birth,calculation, current_date,year_2, enlistment_year ))
